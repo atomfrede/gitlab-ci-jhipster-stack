@@ -6,12 +6,12 @@ RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
 RUN apt-get install -y nodejs python g++ build-essential
 
 # install yeoman
-npm install -g yo
+RUN npm install -g yo
 
 # install bower
-npm install -g bower
+RUN npm install -g bower
 
 #install gulp
-npm install -g gulp
+RUN npm install -g gulp
 
 ADD settings.xml ~./m2/settings.xml
