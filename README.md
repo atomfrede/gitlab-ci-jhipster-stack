@@ -45,7 +45,7 @@ cache:
 stages:
   - build
 
-mvn-package:
+gradle-assemble:
   stage: build
   script: "./gradlew -g /cache assemble"
 ```
