@@ -9,7 +9,7 @@ In order to have local maven repository cached by gitlab ci you have to change
 the local maven repository when executing maven:
 
 ```
-./mvnw package -Dmaven.repo.local=/cache
+./mvnw package -Dmaven.repo.local=cache
 ```
 In order to cache e.g. ``bower_components`` you can define this in your ``gitlab-ci.yml``.
 A sample gitlab ci config may look like this:
@@ -21,13 +21,14 @@ cache:
   paths:
    - node_modules
    - src/main/webapp/bower_components
+   - cache
 
 stages:
   - build
 
 mvn-package:
   stage: build
-  script: "./mvnw package -Dmaven.repo.local=/cache"
+  script: "./mvnw package -Dmaven.repo.local=cache"
 ```
 
 ## Gradle example
@@ -41,11 +42,12 @@ cache:
   paths:
    - node_modules
    - src/main/webapp/bower_components
+   - cache
 
 stages:
   - build
 
 gradle-assemble:
   stage: build
-  script: "./gradlew -g /cache assemble"
+  script: "./gradlew -g cache assemble"
 ```
