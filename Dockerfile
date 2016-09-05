@@ -1,4 +1,4 @@
-FROM       ubuntu:xenial
+FROM       java
 MAINTAINER Frederik Hahne <frederik.hahne@gmail.com>
 
 # install node.js
