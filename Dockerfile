@@ -1,4 +1,4 @@
-FROM       java
+FROM       opnejdk:8
 MAINTAINER Frederik Hahne <frederik.hahne@gmail.com>
 
 # install node.js
@@ -13,3 +13,6 @@ RUN npm install -g bower
 
 #install gulp
 RUN npm install -g gulp
+
+# install docker
+
