@@ -13,5 +13,3 @@ RUN npm install -g bower
 
 #install gulp
 RUN npm install -g gulp
-
-ADD settings.xml ~./m2/settings.xml
