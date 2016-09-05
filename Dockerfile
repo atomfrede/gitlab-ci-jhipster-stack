@@ -1,4 +1,4 @@
-FROM       openjdk:8
+FROM       ubuntu:xenial
 MAINTAINER Frederik Hahne <frederik.hahne@gmail.com>
 
 # install node.js
@@ -15,4 +15,7 @@ RUN npm install -g bower
 RUN npm install -g gulp
 
 # install docker
-
+RUN echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" > /etc/apt/sources.list.d/docker.list
+RUN apt-get update
+RUN apt-get install docker-engine
+RUN service docker start
