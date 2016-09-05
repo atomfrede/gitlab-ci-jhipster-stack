@@ -1,4 +1,4 @@
-FROM       opnejdk:8
+FROM       openjdk:8
 MAINTAINER Frederik Hahne <frederik.hahne@gmail.com>
 
 # install node.js
