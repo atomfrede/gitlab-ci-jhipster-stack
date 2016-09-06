@@ -17,5 +17,8 @@ RUN npm install -g gulp
 # install docker
 RUN echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update
+RUN apt-get purge lxc-docker
+RUN apt-cache policy docker-engine
+RUN apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
 RUN apt-get install -y docker-engine
 RUN service docker start
