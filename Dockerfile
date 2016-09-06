@@ -28,4 +28,3 @@ RUN apt-get purge lxc-docker
 RUN apt-cache policy docker-engine
 RUN apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
 RUN apt-get install -y docker-engine
-RUN service docker start
