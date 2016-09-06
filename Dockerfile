@@ -1,5 +1,8 @@
-FROM       ubuntu:xenial
+FROM       ubuntu:latest
 MAINTAINER Frederik Hahne <frederik.hahne@gmail.com>
+
+# install open jdk
+RUN apt-get install -y openjdk-8-jdk
 
 RUN apt-get install -y curl
 # install node.js
@@ -15,8 +18,6 @@ RUN npm install -g bower
 #install gulp
 RUN npm install -g gulp
 
-# install open jdk
-RUN apt-get install -y openjdk-8-jdk
 # install docker
 RUN echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" > /etc/apt/sources.list.d/docker.list
 RUN apt-get update
