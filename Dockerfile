@@ -1,6 +1,7 @@
-FROM       ubuntu:latest
+FROM       ubuntu
 MAINTAINER Frederik Hahne <frederik.hahne@gmail.com>
 
+RUN apt-get update
 # install open jdk
 RUN apt-get install -y openjdk-8-jdk
 
