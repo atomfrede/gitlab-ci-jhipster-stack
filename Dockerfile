@@ -1,6 +1,7 @@
 FROM       ubuntu:xenial
 MAINTAINER Frederik Hahne <frederik.hahne@gmail.com>
 
+RUN apt-get install -y curl
 # install node.js
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 RUN apt-get install -y nodejs python g++ build-essential
