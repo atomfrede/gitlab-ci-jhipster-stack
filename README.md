@@ -59,7 +59,7 @@ before_script:
 stages:
   - build
 
-mvn-package:
+gradle-assemble:
   stage: build
   script: "./gradlew assemble"
 ```
